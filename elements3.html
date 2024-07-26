@@ -174,7 +174,7 @@
         </div>
         <h1>CAPTURE THE FLAG</h1>
         <h2>Level 3</h2>
-        <p class="puzzle">What is 5 + 3?
+        <p class="puzzle">The total number of artificial elements found till date is ?
         </p>
         <div>
             <input type="text" id="answerInput" placeholder="Enter your answer" onkeypress="if(event.keyCode == 13) {checkAnswer();}">
@@ -195,7 +195,7 @@
     <script>
         let score = 0;
         let incorrectAttempts = 0;
-        const level4Password = 'lev4pass'; // Example password for the next level
+        const level3Password = 'uranium96'; // Example password for the next level
         let hasAnsweredCorrectly = false;
         let timeLeft = 60; // 1 minutes in seconds
         let skipsLeft = 3; // Number of skips allowed
@@ -207,7 +207,7 @@
 
         function checkAnswer() {
             const userAnswer = document.getElementById("answerInput").value.trim();
-            const correctAnswer = "8"; // Adjust based on actual answer
+            const correctAnswer = "26"; // Adjust based on actual answer
             if (userAnswer === correctAnswer && !hasAnsweredCorrectly) {
                 document.getElementById("message").innerHTML = `<span style='color: green;'>Correct! Your password for the next level is: <span id="password">${level4Password}</span></span>`;
                 document.querySelector('.next-level-btn').style.display = 'block';
