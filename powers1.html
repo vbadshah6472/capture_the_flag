@@ -184,7 +184,7 @@
         </div>
         <div class="message" id="message"></div>
         <div class="copied-notification" id="copiedNotification">Password copied to clipboard!</div>
-        <button class="next-level-btn" onclick="window.location.href='level2.html'">Proceed to Next Level</button>
+        <button class="next-level-btn" onclick="window.location.href='difference2.html'">Proceed to Next Level</button>
         <!-- Skip Button -->
         <button class="skip-btn" onclick="showSkipWarning()">Skip (3)</button>
         <!-- Skip Warning Message -->
@@ -302,7 +302,7 @@
         }
 
         function proceedToNextLevel() {
-    let url = 'level2.html';
+    let url = 'difference2.html';
     if (skipsLeft <= 0 || timeLeft <= 0) {
         localStorage.setItem('bypassLevel2', 'true'); // Set bypass flag in local storage
     }
