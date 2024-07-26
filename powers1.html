@@ -172,7 +172,7 @@
 <body oncopy="return false" onpaste="return false" oncut="return false">
     <div class="container">
         <div class="timer">
-            <h3>Time Left: <span id="timer">01:30</span></h3>
+            <h3>Time Left: <span id="timer">01:00</span></h3>
         </div>
         <h1>CAPTURE THE FLAG</h1>
         <h2>Level 1</h2>
@@ -197,9 +197,9 @@
     <script>
         let score = 0;
         let incorrectAttempts = 0;
-        const level2Password = 'lev2pass'; // Example password for the next level
+        const level1Password = 'pass123'; // Example password for the next level
         let hasAnsweredCorrectly = false;
-        let timeLeft = 90; // 1.5 minutes in seconds
+        let timeLeft = 60; // 1 minute in seconds
         let skipsLeft = 3; // Number of skips allowed
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -211,7 +211,7 @@
             const userAnswer = document.getElementById("answerInput").value.trim();
             const correctAnswer = "0"; // Adjust based on actual answer
             if (userAnswer === correctAnswer && !hasAnsweredCorrectly) {
-                document.getElementById("message").innerHTML = `<span style='color: green;'>Correct! Your password for the next level is: <span id="password">${level2Password}</span></span>`;
+                document.getElementById("message").innerHTML = `<span style='color: green;'>Correct! Collect your password is: <span id="password">${level2Password}</span></span>`;
                 document.querySelector('.next-level-btn').style.display = 'block'; // Show next level button
                 updateScore(10);
                 incorrectAttempts = 0;
