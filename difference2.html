@@ -175,7 +175,7 @@
         <h1>CAPTURE THE FLAG</h1>
         <h2>Level 2</h2>
         <p class="puzzle">
-            What is 2 + 2?
+            The difference between <b>-15</b> and <b>+15</b> is ?
         </p>
         <div>
             <input type="text" id="answerInput" placeholder="Enter your answer" onkeypress="if(event.keyCode == 13) {checkAnswer();}">
@@ -196,7 +196,7 @@
     <script>
         let score = 0;
         let incorrectAttempts = 0;
-        const level3Password = 'lev3pass'; // Example password for the next level
+        const level2Password = 'NeverGiveUp'; // password obtained from the level
         let hasAnsweredCorrectly = false;
         let timeLeft = 60; // 1 minute in seconds
         let skipsLeft = 3; // Number of skips allowed
@@ -208,9 +208,9 @@
 
         function checkAnswer() {
             const userAnswer = document.getElementById("answerInput").value.trim();
-            const correctAnswer = "4"; // Adjust based on actual answer
+            const correctAnswer = "0"; // Adjust based on actual answer
             if (userAnswer === correctAnswer && !hasAnsweredCorrectly) {
-                document.getElementById("message").innerHTML = `<span style='color: green;'>Correct! Your password for the next level is: <span id="password">${level3Password}</span></span>`;
+                document.getElementById("message").innerHTML = `<span style='color: green;'>Correct! Collect Your Password: <span id="password">${level3Password}</span></span>`;
                 document.querySelector('.next-level-btn').style.display = 'block';
                 updateScore(10);
                 incorrectAttempts = 0;
