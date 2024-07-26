@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 3 - STEM ELITES CLUB CTF</title>
+    <title>Level 4 - STEM ELITES CLUB CTF</title>
     <style>
         /* Similar CSS to Level 1 and 2 */
         body {
@@ -174,7 +174,7 @@
         </div>
         <h1>CAPTURE THE FLAG</h1>
         <h2>Level 4</h2>
-        <p class="puzzle">What is the value of PI?
+        <p class="puzzle">The shortcut key to cut any content in MS-Word is : CTRL + ____ .
         </p>
         <div>
             <input type="text" id="answerInput" placeholder="Enter your answer" onkeypress="if(event.keyCode == 13) {checkAnswer();}">
@@ -182,7 +182,7 @@
         </div>
         <div class="message" id="message"></div>
         <div class="copied-notification" id="copiedNotification">Password copied to clipboard!</div>
-        <button class="next-level-btn" onclick="window.location.href='level4.html'">Proceed to Next Level</button>
+        <button class="next-level-btn" onclick="window.location.href='ctrl4.html'">Proceed to Next Level</button>
         <!-- Skip Button -->
         <button class="skip-btn" onclick="showSkipWarning()">Skip (3)</button>
         <!-- Skip Warning Message -->
@@ -195,7 +195,7 @@
     <script>
         let score = 0;
         let incorrectAttempts = 0;
-        const level4Password = 'lev4pass'; // Example password for the next level
+        const level4Password = 'Control@123'; // Example password for the next level
         let hasAnsweredCorrectly = false;
         let timeLeft = 60; // 1 minutes in seconds
         let skipsLeft = 3; // Number of skips allowed
@@ -207,9 +207,9 @@
 
         function checkAnswer() {
             const userAnswer = document.getElementById("answerInput").value.trim();
-            const correctAnswer = "8"; // Adjust based on actual answer
+            const correctAnswer = "V"; // Adjust based on actual answer
             if (userAnswer === correctAnswer && !hasAnsweredCorrectly) {
-                document.getElementById("message").innerHTML = `<span style='color: green;'>Correct! Your password for the next level is: <span id="password">${level4Password}</span></span>`;
+                document.getElementById("message").innerHTML = `<span style='color: green;'>Correct! Collect your password: <span id="password">${level4Password}</span></span>`;
                 document.querySelector('.next-level-btn').style.display = 'block';
                 updateScore(10);
                 incorrectAttempts = 0;
